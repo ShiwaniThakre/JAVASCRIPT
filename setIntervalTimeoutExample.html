@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Set Timeout & Interval</title>
+</head>
+<body>
+    <h3 id="hed"></h3>
+
+    <script>
+         var t= setInterval(fun,1000); //continue display after every 3 sec.
+      //setTimeout (fun,3000); //only one time shows after 3 sec.
+      count=0;
+      function fun()
+      {
+        hed.innerHTML+="<p>Hello Students!!</p>"
+        count++;
+        if(count==5)
+        {
+            clearInterval(t);
+        }
+      }
+    </script>
+</body>
+</html>

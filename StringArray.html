@@ -1,0 +1,72 @@
+<head>
+    <style>
+        table,td,tr,th
+        {
+         border: 3px inset rgb(58, 38, 23);
+         border-collapse: collapse;
+         padding: 10px;
+         width: 300px;
+         height: 40px;
+         text-align: center;
+         margin: auto;;
+        }
+        table td
+        {
+            background-color: rgb(80, 184, 132);
+            color:black;
+        }
+        table tr
+        {
+            background-color: rgb(14, 52, 32);
+            color: white;
+        }
+    </style>
+<script>
+
+    var names=[10], rno=[10], m1=[10], m2=[10], m3=[10], total=[10], grade=[10], per=[10], i, nos;
+     nos =parseInt(prompt("enter number of students"));
+    for(i=0;i<nos;i++)
+    {
+        names[i]=prompt("enter name");
+        rno[i]=parseInt(prompt("enter rno"));
+        m1[i]=parseInt(prompt("enter marks1"));
+        m2[i]=parseInt(prompt("enter marks2"));
+        m3[i]=parseInt(prompt("enter marks3"));
+    }
+    for(i=0;i<nos;i++)
+    {
+        total[i]=m1[i]+m2[i]+m3[i];
+        per[i]=total[i]/3;
+        if(per[i]>=70)
+        {
+        grade[i]="A";
+        }
+        else if(per[i]>=60 && per[i]<70)
+        {
+        grade[i]="B";
+        }
+        else if(per[i]>=50 && per[i]<60)
+        {
+        grade[i]="C";
+        }
+        else if(per[i]>=40 && per[i]<50)
+        {
+        grade[i]="D";
+        }
+        else
+        {
+        grade[i]="Fail";
+        }
+    }
+        document.write("<table width='500px' align='center' cellpadding=5>");
+        document.write("<caption><h1> Students Marksheet</h1></caption>");
+        document.write("<tr><th> Student Name</th><th> Roll No</th><th> M1</th><th> M2</th><th> M3</th><th> Total</th><th> Percentage</th><th> Grade</th></tr>");
+        for(i=0;i<nos;i++)
+        {
+            document.write("<tr><td>"+names[i]+"</td><td>"+rno[i]+"</td><td>"+m1[i]+"</td><td>"+m2[i]+"</td><td>"+m3[i]+"</td><td>"+total[i]+"</td><td>"+per[i].toFixed(2)+"</td><td>"+grade[i]+"</td></tr>")
+        }
+        document.write("</table>");
+    
+
+</script>
+</head>

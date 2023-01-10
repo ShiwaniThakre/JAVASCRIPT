@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <style>
+    .c1
+    {
+      border: 3px solid blue;
+      font-size: larger;
+      width: 300px;
+      height: 200px;
+      padding: 20px;
+    }
+    
+    .b
+    {
+      margin-top: 50px;
+    }
+   
+  </style>
+<body>
+
+
+<p id="p1">Change Style Of This Para.</p>
+
+<button onmouseout="change_style()">Change style of para</button>
+
+<button id="demo">Add para</button>
+
+<button id="btn">Create a Division</button>
+
+
+
+<script>
+function change_style()
+ {
+    var text=document.getElementById('p1');
+        text.style.color="red";
+        text.style.fontSize="25px";
+        text.style.fontFamily="monospace ";
+}
+
+
+document.getElementById("demo").addEventListener("click",para);
+function para() {
+  var d2= document.createElement('p');
+  var txt=document.createTextNode("this is paragraph one");
+  d2.appendChild(txt);
+  document.body.append(d2);
+}
+  document.getElementById("btn").addEventListener("click",fun)
+function fun() 
+{
+  var d1=document.createElement('div');
+  var b1=document.createElement('button');
+  var text=document.createTextNode("welcome");
+  var btext=document.createTextNode("Click Me");
+  b1.appendChild(btext);
+  d1.appendChild(text);
+  d1.appendChild(b1); 
+  document.body.appendChild(d1);
+  d1.setAttribute("class","c1");
+  b1.setAttribute("class","b");
+}
+</script>
+
+</body>
+</html>

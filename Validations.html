@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Validations in Javascript</title>
+ <script>
+     var p1='(^[7896]{1,1})+([0-9]{9,9})$' ;   //mobile no
+     var p2= '(^[A-Z]{1,1})+([A-Za-z ]{1,10})$';  //Username
+     // validation EMAIL :  /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/; 
+      // email 2 == var p3 = /(^[a-z]{1,1})+([a-z0-9]{0,9})+([._]{0,1})([a-z0-9]{1,19})+([@]{1,1})([a-z]{2,19})+([.]{1,1})(com|co.in|in|usa|fr)$/;
+    // var p3='(^[abc]$)';
+    // password:-'(^[a-zA-Z0-9@#$%&*]{2,9})+([@#$%&*]{1,1})+([a-zA-Z0-9@#$%&*]{3,10})$';
+    // or password:-'(^[a-zA-Z0-9@#$%&*]{8,16})$'
+    var name ="Rohan Joshi"
+
+    var num="7058421330"
+    if(num.match(p1))
+    {
+        alert("correct");
+    }else{
+        alert("wrong");
+    }
+
+</script>
+</head>
+
+<body>
+    
+</body>
+</html>

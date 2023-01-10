@@ -1,0 +1,137 @@
+<head>
+<script>
+     //Self contained block of program is known as function.
+     //program 1
+    function fun()  // function definition
+    {
+        alert("I am in fun block");
+    }
+    function fun1()
+    {
+        alert("I am in fun1 block");
+    }
+
+    fun()   //function calling
+    fun1()  
+
+
+
+    //program2
+    // no parameter no return type
+
+    function fact()  // function definition
+    {
+        var f=1,i,no=5;
+        for(i=1;i<=no;i++)
+        {
+            f=f*i;
+        }
+        document.write("Factorial:- "+f+"<br>");
+    }
+    function fibo()
+    {
+        var f1=0,f2=1,f3,i,no=8;
+        document.write(f1+"&nbsp;"+f2+"&nbsp;");
+        for(i=1;i<=no;i++)
+        {
+            f3=f1+f2;
+            document.write(f3+"&nbsp");
+            f1=f2;
+            f2=f3;
+        }document.write("<br>"+"<br>");
+    }
+
+    fact()   //function calling
+    fibo()  
+
+
+    // with  parameter no return value from function
+
+    function fact1(no)  // function definition
+    {
+        var f=1,i;
+        for(i=1;i<=no;i++)
+        {
+            f=f*i;
+        }
+        document.write("Factorial:- "+f+"<br>");
+    }
+    function fibo1(no)
+    {
+        var f1=0,f2=1,f3,i;
+        document.write(f1+"&nbsp;"+f2+"&nbsp;");
+        for(i=1;i<=no;i++)
+        {
+            f3=f1+f2;
+            document.write(f3+"&nbsp");
+            f1=f2;
+            f2=f3;
+        }document.write("<br>"+"<br>");
+    }
+
+    fact1(5)   //actual arguments
+    fibo1(8)
+
+
+    // with  parameter with return value from function
+
+    function fact2(no)  // function definition
+    {
+        var f=1,i;
+        for(i=1;i<=no;i++)
+        {
+            f=f*i;
+        }
+        return f;
+    }
+    function fibo2(no)
+    {
+        var f1=0,f2=1,f3,i;
+        document.write(f1+"&nbsp;"+f2+"&nbsp;");
+        for(i=1;i<=no;i++)
+        {
+            f3=f1+f2;
+            document.write(f3+"&nbsp");
+            f1=f2;
+            f2=f3;
+        }document.write("<br>"+"<br>");
+    }
+
+    var result;
+    result=fact2(5)  //actual arguments
+    document.write("Factorial:- "+result+"<br>");
+    fibo2(8)
+
+
+    //no parameter with return values 
+    function fact3()  // function definition
+    {
+        var f=1,i,no=5;
+        for(i=1;i<=no;i++)
+        {
+            f=f*i;
+        }
+        return f;
+    }
+    function fibo3(no)
+    {
+        var f1=0,f2=1,f3,i;
+        document.write(f1+"&nbsp;"+f2+"&nbsp;");
+        for(i=1;i<=no;i++)
+        {
+            f3=f1+f2;
+            document.write(f3+"&nbsp");
+            f1=f2;
+            f2=f3;
+        }document.write("<br>"+"<br>");
+    }
+
+    var result;
+    result=fact3()  //actual arguments
+    document.write("Factorial:- "+result+"<br>");
+    fibo3(8)
+
+
+
+</script>
+</head>

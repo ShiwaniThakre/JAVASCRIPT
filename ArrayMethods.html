@@ -1,0 +1,146 @@
+<html>
+<head>
+<script>
+    //ARRAY LENGHT    -lenght of array
+     var city=["California", "Barcelona", "Paris", "Kathmandu"];
+     var len= city.length;
+     console.log(len);
+
+     //REVERSE ARRAY   -reverse arrays
+     var city=["California", "Barcelona", "Paris", "Kathmandu"];
+     var result= city.reverse();
+     console.log(result);
+
+     //SORT ARRAY    -sort by ascending order
+     var city=["California", "Barcelona", "Paris", "Kathmandu"];
+     var result= city.sort();
+     console.log(result);
+
+     //POP ARRAY  -show last element
+     var city=["California", "Barcelona", "Paris", "Kathmandu"];
+     var result= city.pop();
+     console.log(result);
+
+     //PUSH ARRAY  -add new element
+     var city=["California", "Barcelona", "Paris", "Kathmandu"];
+     city.push("Delhi");
+     console.log(city);
+
+     //SHIFT ARRAY  -remove first elememnt and show
+     var city=["California", "Barcelona", "Paris", "Kathmandu"];
+     var result=city.shift();
+     console.log(result);
+
+     //UNSHIFT ARRAY   -add element at begining
+     var city=["California", "Barcelona", "Paris", "Kathmandu"];
+     city.unshift("pune");
+     console.log(city);
+
+     //INDEXOF() METHOD  -written first index of element. if element not found ,it writtens -1
+     var city=["California", "Barcelona", "Paris", "Kathmandu"];
+     var index=city.indexOf("California");
+     console.log(index);
+
+     //SLICE METHOD  -values come out of given range not including 2nd range
+     var city=[10,20,30,40,50,60,70,80];
+     var result=city.slice(3,6);
+     console.log(result);
+
+     //SPLICE METHOD  - values can add and remove of given range 
+     var languages=["Javascript","Python","Java","SQL"];
+     languages.splice(2,0,"C","C++");  //0 means no-one delete just shift and add elements between 2 and 3. //1 means delete one and add two elements after 2nd position
+     console.log(languages);
+
+     //FIND METHOD   -search only 1 element of given condition
+     num=[1,2,3,4,5,6,7];
+     function isEven(elemement)
+     {
+        if(elemement%2==0)
+        {
+            return elemement;
+        }
+     }
+     console.log(num.find(isEven));
+
+     //INCLUDES METHOD   - to check the element is present or not.
+     num=[1,2,3,4,5,6,7];
+     console.log(num.includes(4));   //if available then true
+     console.log(num.includes(10));  // if not available then false
+
+     //FILTER METHOD  - create new array of filtered number by given condition.
+     num=[1,2,3,4,5,6,7,8,9,10,15,20];
+     function isEven(elemement)
+     {
+        if(elemement%2==0)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+     }
+     var evenArr =  num.filter(isEven);
+     console.log(evenArr);
+     
+
+     function isOdd(elemement)
+     {
+        if(elemement%2!=0)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+     }
+     var oddArr =  num.filter(isOdd);
+     console.log(oddArr);
+
+     //FOREACH METHOD 
+
+       // square
+     num=[1,2,3,4,5,6,7,8,9,10];
+     function square(element)
+     {
+        sq=element*element;
+        console.log(sq);
+     }
+     num.forEach(square);
+
+
+     // sum of elements
+     var sm=0;
+     function sum(element)
+     {
+        sm=sm+element;
+     }
+     num.forEach(sum);
+     console.log(sm);  
+
+
+     //sum of even and odd elements
+     num=[1,2,3,4,5,6,7,8,9,10,15,20];
+     var esum=0;
+     var osum=0;
+     function square(element)
+     {
+     if(element%2==0)
+     {
+        esum=esum+element;
+     }
+     else
+     {
+        osum=osum+element;
+     }
+    }
+     num.forEach(square);
+     console.log(`Even Number Sum :- ${esum}`);
+     console.log(`Odd Number Sum :- ${osum}`);
+
+
+
+</script>
+</head>
+</html>

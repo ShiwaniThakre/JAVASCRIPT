@@ -1,0 +1,29 @@
+<html>
+<head>
+    <title>Event Haandling - get Element by Class</title>
+    <script>
+         function fun()
+         {
+            var className= document.getElementsByClassName("c1");
+            className[0].innerHTML="new para";
+            className[1].innerHTML="JavaScript is Scripting Language";
+
+            for(var i=0;i<className.length;i++)
+            {
+                className[i].style.color="red";
+                className[i].style.fontSize="20px";
+                className[i].style.fontFamily="monospace";
+            }
+         }
+    </script>
+    <body>
+        <p class="c1">This is para one</p>
+        <p class="c1">This is para two</p>
+        <h1 class="c1">This Is heading one</h1>
+        <h2>This Is heading Two</h2>
+
+        <button onclick="fun()">getElementsbyclassName</button>
+
+    </body>
+</head>
+</html>

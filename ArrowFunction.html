@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Arrow Function</title>
+    <script>
+        const show =(a,b) =>
+        {
+            var c=a+b;
+            console.log(c);
+        }
+        show(10,20);
+
+        // or easy method 
+         const disp=(x,y)=> x+y;
+         console.log(disp(20,30));
+
+         // arrow function with default value
+        const dis =(p,q,r=100)=>p+q+r;
+        console.log(dis(50,60,70));
+
+        // arrow function with args
+        const shows =(...args)=>
+        {
+        for(i of args)
+        {
+             console.log(i);
+        }
+       }
+        shows(1,2,3,4,5,6);
+
+        //Args with normal parameter
+        const display =(m,n,o,...args)=>
+        {
+             console.log(m+n+o);
+        for(i of args)
+        {
+             console.log(i);
+        }
+       }
+        display(1,2,3,4,5,6,7,8,9);
+
+        //forEach loop in javascript
+        const courses=["C","C++","JAVA","PYTHON","WEB","ANDROID"];
+        courses.forEach(x=>
+        {
+           console.log(x);
+        })
+
+        //forEach loop 
+        const names=["john","blake","scott","martin","smith"];
+        names.forEach(reverse_string);
+        function reverse_string(x)
+        {
+            document.writeln(x);
+            document.writeln("<br>");
+        }
+
+        //forEach loop with reverse array
+        const name=["john","blake","scott","martin","smith"];
+        const reverse_arr=[];
+        name.forEach(revers_string);
+        function revers_string(p)
+        {
+            var txt="";
+            for(var i=p.length-1;i>=0;i--)
+            {
+               txt+=p[i];
+            }
+            reverse_arr.push(txt);
+        }
+        console.log(reverse_arr);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

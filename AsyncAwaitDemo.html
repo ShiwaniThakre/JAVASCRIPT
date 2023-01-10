@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Async Await Example</title>
+    <script>
+    function fun1()
+    {
+       setTimeout(function(){
+        console.log("fun1 block");
+       },3000)
+    }
+    function fun2()
+    {
+       setTimeout(function(){
+        console.log("fun2 block");
+       },2000)
+    }
+    function fun3()
+    {
+        setTimeout(function(){
+        console.log("fun3 block");
+       },1000)
+    }
+    fun1();
+    fun2();
+    fun3();
+    
+//with Example
+    var a=1;
+    var b=2;
+    function val1()
+    {
+       setTimeout(function(){
+        a=20;
+       },4000)
+        return a;
+    }
+    function val2()
+    {
+       setTimeout(function(){
+        b=30;
+        return b;
+       },3000)
+    }
+    function val3()
+    {
+        console.log(a+b);
+    }
+    a=val1();
+    val2();
+    val3();
+</script>
+</head>
+<body>
+    
+</body>
+</html>

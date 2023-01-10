@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Registration Form</title>
+   
+<script>
+    var name = '(^[A-Z]{1,1})+([A-Za-z]{1,9})$';
+    var mbno = '(^[7896]{1,1})+([0-9]{9,9})$' ;
+    var em = /(^[a-z]{1,1})+([a-z0-9]{0,9})+([._]{0,1})([a-z0-9]{1,19})+([@]{1,1})([a-z]{2,19})+([.]{1,1})(com|co.in|in|usa|fr)$/;
+    var pswd = '(^[a-zA-Z0-9@#$%&*]{8,16})$';
+    // password:-'(^[a-zA-Z0-9@#$%&*]{2,9})+([@#$%&*]{1,1})+([a-zA-Z0-9@#$%&*]{3,10})$';
+    //USERNAME
+        function nam1() {
+            err.innerHTML="";
+            f1.uname.style.border = "3px solid green";
+            msg1.innerHTML = "Please Fill User Name";
+            msg1.style.color = "green";
+        }
+        function nam3() {
+            msg1.innerHTML = "";
+        }
+        function nam2() {
+            var uname = f1.uname.value;
+            if (!uname.match(name)) {
+
+                f1.uname.value = "";
+                f1.uname.focus();
+                msg1.innerHTML = "Please Fill correct User Name";
+                msg1.style.color = "red";
+                uname.style.border = "3px solid red";
+            }
+            else {
+                err.innerHTML = "<img src='tick-icon.png' height='30px'width='30px'>";
+                msg1.innerHTML = "";
+                f1.mno.focus();
+            }
+        }
+        
+        //MOBILE NO
+        function mobile1() {
+            err1.innerHTML="";
+            f1.mno.style.border = "3px solid green";
+            msg2.innerHTML = "Please Fill MObile no";
+            msg2.style.color = "green";
+        }
+        function mobile3() {
+            msg2.innerHTML = "";
+        }
+        function mobile2() {
+            var mno = f1.mno.value;
+            if (!mno.match(mbno)) {
+
+                f1.mno.value = "";
+                f1.mno.focus();
+                msg2.innerHTML = "Please Fill correct Mobile No";
+                msg2.style.color = "red";
+                mno.style.border = "3px solid red";
+            }
+            else {
+                err1.innerHTML = "<img src='tick-icon.png' height='30px'width='30px'>";
+                msg2.innerHTML = "";
+                f1.email.focus();
+            }
+        }
+
+        //EMAIL 
+        function email1() {
+            err2.innerHTML="";
+            f1.email.style.border = "3px solid green";
+            msg3.innerHTML = "Please Fill Email";
+            msg3.style.color = "green";
+        }
+        function email3() {
+            msg3.innerHTML = "";
+        }
+        function email2() {
+            var email = f1.email.value;
+            if (!email.match(em)) {
+
+                f1.email.value = "";
+                f1.email.focus();
+                msg3.innerHTML = "Please Fill correct Email";
+                msg3.style.color = "red";
+                email.style.border = "3px solid red";
+            }
+            else {
+                err2.innerHTML = "<img src='tick-icon.png' height='30px'width='30px'>";
+                msg3.innerHTML = "";
+                f1.password.focus();
+            }
+        }
+        // PASSWORD
+        function pass1() {
+            err3.innerHTML="";
+            f1.password.style.border = "3px solid green";
+            msg4.innerHTML = "Please Fill Password";
+            msg4.style.color = "green";
+        }
+        function pass3() {
+            msg4.innerHTML = "";
+        }
+        function pass2() {
+            var password = f1.password.value;
+            if (!password.match(pswd)) {
+
+                f1.password.value = "";
+                f1.password.focus();
+                msg4.innerHTML = "Please Fill correct Password";
+                msg4.style.color = "red";
+                password.style.border = "3px solid red";
+            }
+            else {
+                err3.innerHTML = "<img src='tick-icon.png' height='30px'width='30px'>";
+                msg4.innerHTML = "";
+                f1.confpas.focus();
+            }
+        }
+        //CONFIRM PASSWORD
+         function pwd1() {
+            err4.innerHTML="";
+            f1.confpas.style.border = "3px solid green";
+            msg5.innerHTML = "Please Confirm Password";
+            msg5.style.color = "green";
+        }
+        function pwd3() {
+            msg5.innerHTML = "";
+        }
+        function pwd2() {
+            var confpas = f1.confpas.value;
+            var password=f1.password.value;
+            if (!confpas.match(password)) {
+
+                f1.confpas.value = "";
+                f1.confpas.focus();
+                msg5.innerHTML = "<p style='color:red'>Incorrect Password</p>";
+                confpas.style.border = "3px solid red";
+            }
+            else {
+                err4.innerHTML = "<img src='tick-icon.png' height='30px'width='30px'>";
+                msg5.innerHTML = "";
+                f1.gen.focus();
+            }
+        }
+        
+
+        //SUBMIT
+        function sub()
+        {
+            var uname = f1.uname.value;
+            var mno = f1.mno.value;
+            var email = f1.email.value;
+            var password = f1.password.value;
+            var confpas = f1.confpas.value;
+            //username
+            if(uname=='')
+            {
+                msg1.innerHTML = "Please Enter User Name";
+                msg1.style.color = "red";
+                f1.uname.style.border = "3px solid red";
+                return false;
+            }
+            if (!uname.match(name)) {
+
+                f1.uname.value = "";
+                f1.uname.focus();
+                msg1.innerHTML = "Please Fill correct User Name";
+                msg1.style.color = "red";
+                uname.style.border = "3px solid red";
+                return false;
+            }
+            //mobile no
+            if(mno=='')
+            {
+                msg2.innerHTML = "Please Enter Mobile No.";
+                msg2.style.color = "red";
+                f1.mno.style.border = "3px solid red";
+                return false;
+            }
+            if (!mno.match(mbno))
+            {
+                f1.mno.value = "";
+                f1.mno.focus();
+                msg2.innerHTML = "Please Fill correct Mobile no";
+                msg2.style.color = "red";
+                mno.style.border = "3px solid red";
+                return false;
+            }
+            //email
+            if(email=='')
+            {
+                msg3.innerHTML = "Please Enter Email";
+                msg3.style.color = "red";
+                f1.email.style.border = "3px solid red";
+                return false;
+            }
+            if (!email.match(em)) {
+                f1.email.value = "";
+                f1.email.focus();
+                msg3.innerHTML = "Please Fill correct Email";
+                msg3.style.color = "red";
+                email.style.border = "3px solid red";
+                return false;
+            }
+            //password
+            if(password=='')
+            {
+                msg4.innerHTML = "Please Enter password";
+                msg4.style.color = "red";
+                f1.password.style.border = "3px solid red";
+                return false;
+            }
+            if (!password.match(pswd)) {
+                f1.password.value = "";
+                f1.password.focus();
+                msg4.innerHTML = "Please Fill correct Password";
+                msg4.style.color = "red";
+                password.style.border = "3px solid red";
+                return false;
+            }
+
+            //confirm password
+            if(confpas=='')
+            {
+                msg5.innerHTML = "Please Confirm Password";
+                msg5.style.color = "red";
+                f1.confpas.style.border = "3px solid red";
+                return false;
+            }
+            if (!confpas.match(password)) {
+                f1.confpas.value = "";
+                f1.confpas.focus();
+                msg5.innerHTML = "<p style='color:red'>Incorrect Password</p>";
+                confpas.style.border = "3px solid red";
+                return false;
+            }
+
+            else
+            {
+                err3.innerHTML = "<img src='tick-icon.png' height='30px'width='30px'>";
+            }
+            //GENDER
+            if(f1.gen[0].checked==false && f1.gen[1].checked==false)
+            {
+                msg6.innerHTML="<p style='color:red'>please select gender</p>";
+                return false;
+            }
+            else{
+                err5.innerHTML = "<img src='tick-icon.png' height='30px'width='30px'>";
+                msg6.innerHTML="";
+            }
+            //HOBBIES
+            var count=0;
+            for(var i=0;i<f1.hobbies.length;i++)
+            {
+                if(f1.hobbies[i].checked==true)
+                {
+                    count++;
+                }
+            }
+            if(count==0)
+            {
+                msg7.innerHTML="<p style ='color:red'>please select hobbies</p>";
+                return false;
+            }else{
+                err6.innerHTML = "<img src='tick-icon.png' height='30px'width='30px'>";
+                msg7.innerHTML="";
+            }
+
+            //select validation
+            {
+                if(f1.city[0].selected==true)
+                {
+                    msg8.innerHTML="<p style ='color:red'>please select city</p>";
+                    return false;
+                }else{
+                    err7.innerHTML = "<img src='tick-icon.png' height='30px'width='30px'>";
+                    msg8.innerHTML="";
+                }
+            }
+        }
+
+</script>
+</head>
+<body>
+<table align="center" cellpadding="7">
+    <caption>
+        <h1>Validation Form</h1>
+    </caption>
+    <form name="f1" action="success.html" onsubmit="return sub()">
+        <tr>
+            <td>Enter Name :-</td>
+            <td><input type="text"  name="uname" onfocus="nam1()" onblur="nam2()" onkeyup="nam3()" autocomplete="off"></td>
+            <td id="err"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td id="msg1"></td>
+        </tr>
+
+        <tr>
+            <td>Enter Mobile No :-</td>
+            <td><input type="text"  name="mno" onfocus="mobile1()" onblur="mobile2()" onkeyup="mobile3()"  autocomplete="off"></td>
+            <td id="err1"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td id="msg2"></td>
+        </tr>
+
+        <tr>
+            <td>Enter Email :-</td>
+            <td><input type="text" name="email" onfocus="email1()" onblur="email2()" onkeyup="email3()"  autocomplete="off"></td>
+            <td id="err2"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td id="msg3"></td>
+        </tr>
+        <tr>
+            <td>Enter Password :-</td>
+            <td><input type="password" name="password" onfocus="pass1()" onblur="pass2()" onkeyup="pass3()" autocomplete="off"></td>
+            <td id="err3"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td id="msg4"></td>
+        </tr>
+        <tr>
+            <td>Confirm Password :-</td>
+            <td><input type="password" name="confpas" onfocus="pwd1()" onblur="pwd2()" onkeyup="pwd3()" autocomplete="off"></td>
+            <td id="err4"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td id="msg5"></td>
+        </tr>
+        <tr>
+            <td>Enter Gender :-</td>
+            <td><input type="radio" name="gen" value="male">Male<input type="radio" name="gen" value="female" autocomplete="off">Female</td>
+            <td id="err5"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td id="msg6"></td>
+        </tr>
+        <tr>
+            <td>Enter Hobbies :-</td>
+            <td><input type="checkbox" name="hobbies" value="Swimming" autocomplete="off">Swimming
+                <input type="checkbox" name="hobbies" value="Playing" autocomplete="off">Playing
+                <input type="checkbox" name="hobbies" value="Dancing" autocomplete="off">Dancing </td>
+            <td id="err6"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td id="msg7"></td>
+        </tr>
+        <tr>
+            <td>Enter Hobbies :-</td>
+            <td><select name="city">
+                <option>--select city--</option>
+                <option>Nagpur</option>
+                <option>Pune</option>
+                <option>Mumbai</option>
+                <option>Nashik</option></select></td>
+            <td id="err7"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td id="msg8"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="submit" value="submit"></td>
+        </tr>
+
+
+    </form>
+</table>
+</body>
+</html>

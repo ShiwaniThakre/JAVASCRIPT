@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <title>Create  Element in Division</title>
+    </head>
+    
+    <script>
+        function create_para()
+        {
+            var p1= document.createElement("p");
+            var p2= document.createElement("p");
+            var btn= document.createElement("button");
+            p1.innerHTML="This Is Para One";
+            p2.innerHTML="This Is Para Two";
+            btn.innerHTML="click";
+            document.getElementById("d1").appendChild(p1);
+            document.getElementById("d1").appendChild(p2);
+            document.getElementById("d1").appendChild(btn);
+        }
+        function remove_para()
+        {
+            var div1 =document.getElementById("d1");
+            var desc=div1.getElementsByTagName("*");
+            for(i=0;i<desc.length;i++)
+            {
+                desc[i].remove();
+            }
+            //div1.remove();
+        }
+    
+    </script>
+    
+    <body>
+        <div id="d1" style="width: 500px; border: 3px solid blue"></div>
+           <br><br><button onmouseover="create_para()">Create New Element</button>
+           
+           <button onmouseover="remove_para()">Remove New Element</button>
+    </body>
+    </html>

@@ -1,0 +1,60 @@
+<html>
+<head>
+    <title>Event Handling</title>
+    <script>
+        function fun()
+        {
+            alert("Click Event called");
+        }
+        function fun1()
+        {
+            alert("Click event called");
+        }
+        function fun2()
+        {
+            var para = document.getElementById('p1');
+            alert(para.innerHTML);
+        }
+        function fun3()
+        {
+            var para =document.getElementById('p2').innerHTML;
+            alert(para);
+        }
+        function change_style()
+        {
+            var text=document.getElementById('p1');
+            text.style.color="red";
+            text.style.fontSize="25px";
+            text.style.border="4px dotted green";
+        }
+        function remove_style()
+        { 
+            var text=document.getElementById('p1');
+            text.style.color=null;
+            text.style.fontSize=null;
+            text.style.border=null;
+        }
+        function addhtml()
+        {
+            var text=p1.innerHTML;
+            head.innerHTML=text;
+        }
+        function removehtml()
+        {
+            head.innerHTML="";
+        }
+    </script>
+
+    <body>
+    <button onclick="fun()">Click me</button>
+    <button onmouseover="fun1()">On Mouse Event Button</button>
+
+    <p id="p1" onmouseenter="addhtml()" onmouseout="removehtml()">This is my first para</p>
+    <p id="p2">This is my second para</p>
+    <h2 id="head"></h2>
+    <button onclick="fun2()">Get First Para</button>
+    <button onmouseover="fun3()">Get second para</button>
+    <button onmouseenter="change_style()" onmouseout="remove_style()">Change style of para one</button>
+    </body>
+</head>
+</html>

@@ -1,0 +1,165 @@
+<html lang="en">
+  <head>
+    <title>Employee record</title>
+    <script>
+      var employeeno=new Array();
+var empname=new Array();
+var departno=new Array();
+var salary=new Array();
+var deptname=new Array();
+var ep;
+var en;
+var d;
+var dn;
+var s;
+function addData(){
+ep=parseInt(f1.eno.value);
+en=(f1.ename.value);
+d=parseInt(f1.deptno.value);
+dn=(f1.dname.value);
+s=parseFloat(f1.sal.value);
+employeeno.push(ep);
+empname.push(en);
+departno.push(d);
+salary.push(d);
+deptname.push(dn);
+alert("Data added successfully !.");
+clearall();
+}
+function displayData(){
+    var str="";
+    // document.writeln("<table><caption><h2>EMPLOYEE DATASHEET</h2></caption>")
+    // document.writeln("<tr><td>Employee Id</td><td>Employee no</td><td>Department Number</td><td>Salary</td><td>Department name</td></tr>");
+    str="<table ><tr> <td>Sr no.</td><td>Employee no</td><td>Employee name</td><td>Department number</td><td>Salary</td><td>Department name</td></tr>";
+    for(var i=0;i<employeeno.length;i++){
+        str+= "<tr><td> "+(i+1)+"</td><td>"+employeeno[i]+"</td><td>"+empname[i]+"</td><td>"+departno[i]+"</td><td>"+salary[i]+"</td><td>"+deptname[i]+"</td></tr>";
+        // document.writeln("<tr>");
+        // document.writeln("<td>"+i+"</td><td> "+employeeno[i]+"</td><td> "+empname[i]+"</td><td> "+departno[i]+"</td><td> "+salary[i]+"</td><td> "+deptname[i]+"</td>");
+        // document.writeln("</tr>");
+    }
+    str+="</table>";
+    // document.writeln("</table>");
+    mydiv.innerHTML =str;
+}
+
+function clearall(){
+    f1.eno.value=null;
+    f1.ename.value=null;
+    f1.deptno.value=null;
+    f1.dname.value=null;
+    f1.sal.value=null;
+}
+function specificSHow(){
+    var statuss=0;
+var number1=parseInt(prompt("Enter the employee number to be displayed="));
+ var strr="";
+for(var i=0;i<employeeno.length;i++){
+    if(employeeno[i]==number1){
+        statuss=1;
+        strr+="<table><tr><td>"+i+"</td><td> "+employeeno[i]+"</td><td> "+empname[i]+"</td><td> "+departno[i]+"</td><td> "+salary[i]+"</td><td> "+deptname[i]+"</td></tr></table>";
+        // document.writeln("<table><caption><h2>EMPLOYEE DATASHEET</h2></caption>")
+        // document.writeln("<tr>");
+        // document.writeln("<td>"+i+"</td><td> "+employeeno[i]+"</td><td> "+empname[i]+"</td><td> "+departno[i]+"</td><td> "+salary[i]+"</td><td> "+deptname[i]+"</td>");
+        // document.writeln("</tr>");
+        // document.writeln("</table>");
+        break;
+    }
+}
+if(statuss==0){
+    alert("Invalid employee id entered.");
+}
+else{
+
+    alert("Employee found successfully.");
+    mydiv.innerHTML=strr;
+}
+}
+function deleteData(){
+    var empno;
+    var empname1;
+    var dept;
+    var deptno;
+    var salar;
+    var stat=0;
+var number1=parseInt(prompt("Enter the employee id to delete="));
+for(var i=0; i<employeeno.length; i++){
+    if(employeeno[i]==number1){
+        empno=employeeno.splice(i,i);
+        empname1=empname.splice(i,i);
+        dept=deptname.splice(i,i);
+        deptno=departno.splice(i,i);
+        salar=salary.splice(i,i);
+        stat=1;
+        break;
+    }
+}
+if(stat==1){
+    alert("The data is successfully deleted for Employee number: "+empno+"Employee name: "+empname1+"Department name: "+dept+"Department no.: "+deptno+"Salary: "+sal);
+}
+else{
+    alert("Record not found");
+}
+}
+
+function clearview(){
+mydiv.innerHTML+=null;
+}
+    </script>
+  </head>
+
+  <body>
+    <center>
+      <form
+        name="f1"
+        style="border: 4px solid black; width: 700px; height: 650px"
+      >
+        <table align="center" cellpadding="5px" id="table1">
+          <tr>
+            <td>Employee No :-</td>
+            <td><input type="text" id="Emp_no"></td>
+          </tr>
+          <tr>
+            <td>Employee Name :-</td>
+            <td><input type="text" id="Emp_name"></td>
+          </tr>
+          <tr>
+            <td>Department No :-</td>
+            <td><input type="text" id="Dept_no"></td>
+          </tr>
+          <tr>
+            <td>Department Name :-</td>
+            <td><input type="text" id="Dept_name"></td>
+          </tr>
+          <tr>
+            <td>Salary :-</td>
+            <td><input type="text" id="sal"></td>
+          </tr>
+
+          <tr>
+            <td>
+              <input type="button" onclick="addData()" value="Add record">
+              <input type="button" onclick="displayData()" value="Show record">
+            </td>
+            <td>
+              <input type="button" onclick="Showsp()" value="Show Spcific record Ename">
+              <input type="button" onclick="Del()" value="Delete record">
+              <input type="button" onclick="clear()" value="clear">
+            </td>
+          </tr>
+        </table>
+
+        <hr />
+
+        <center>
+          <table id="tbl" align="center" cellpadding="5px" border="1">
+              <th>Employee No</th>
+              <th>Employee Name</th>
+              <th>Deptparment No</th>
+              <th>Department Name</th>
+              <th>Salary</th>
+          </table>
+        </center>
+      </form>
+    </center>
+  </body>
+</html>

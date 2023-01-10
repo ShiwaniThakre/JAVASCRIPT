@@ -1,0 +1,81 @@
+<html>
+<head>
+    <title>Mini Calculator</title>
+
+</head>
+<script>
+    var a,b,ans;
+    function add()
+    {
+        a=parseInt(f1.t1.value);
+        b=parseInt(f1.t2.value);
+        ans=a+b;
+        f1.result.value=ans;
+        head1.innerHTML="Addition:- "+ans;
+    }
+    function sub()
+    {
+        a=parseInt(f1.t1.value);
+        b=parseInt(f1.t2.value);
+        ans=a-b;
+        f1.result.value=ans;
+        head2.innerHTML="Substraction:- "+ans;
+    }
+    function mul()
+    {
+        a=parseInt(f1.t1.value);
+        b=parseInt(f1.t2.value);
+        ans=a*b;
+        f1.result.value=ans;
+        head3.innerHTML="Multiplication:- "+ans;
+    }
+    function div()
+    {
+        a=parseInt(f1.t1.value);
+        b=parseInt(f1.t2.value);
+        ans=a/b;
+        f1.result.value=ans;
+        head4.innerHTML="Division:- "+ans;
+    }
+    function clr()
+    {
+        f1.t1.value="";
+        f1.t2.value="";
+        f1.result.value="";
+    }
+</script>
+
+<body>
+
+    <form name="f1">
+    <table align="center" cellpadding="5">
+        <caption><h2>Calculator</h2></caption>
+        <tr>
+            <td>Enter No 1:-</td>
+            <td><input type="text" name="t1"> </td>
+        </tr>
+        <tr>
+            <td>Enter No 2:- </td>
+            <td><input type="text" name="t2"> </td>
+        </tr>
+        <tr>
+            <td>Result:-</td>
+            <td><input type="text" name="result"> </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="button" onclick="add()"value="Addition">
+                <input type="button" onclick="sub()"value="Substraction">
+                <input type="button" onclick="mul()"value="Multiplication">
+                <input type="button" onclick="div()"value="Division">
+                <input type="button" onclick="clr()"value="CLear">
+            </td>
+        </tr>
+    </table>
+    <h3 id="head1" style="text-align: center;" ></h3>
+    <h3 id="head2" style="text-align: center;" ></h3>
+    <h3 id="head3" style="text-align: center;" ></h3>
+    <h3 id="head4" style="text-align: center;" ></h3>
+</form>
+</body>
+</html>

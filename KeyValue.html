@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <script>
+        var employee={
+            fname:"ABC",
+            lname:"pqr",
+            age:23,
+            city:"pune"
+        }
+        for(let i in employee)
+        {
+        console.log(`${employee[i]}`);
+        }
+        var student=[
+            {"stno":1,"stname":"Rahul","Marks":78,"city":"Mumbai"},
+            {"stno":2,"stname":"Shreya","Marks":68,"city":"Pune"},
+            {"stno":3,"stname":"Amit","Marks":96,"city":"Nashik"},
+            {"stno":4,"stname":"Ruhi","Marks":45,"city":"Nagpur"},
+            {"stno":5,"stname":"Priya","Marks":58,"city":"Amravti"}
+        ]
+        console.log(student[0]);
+        console.log(student[1]["stname"]);
+        console.log(student[2]["city"]);
+        for(let i in student)
+        {
+            for(let x in student[i])
+            {
+                //console.log(student[i][x]+" ");
+            if(num==student[i]["Marks"]>=60)
+            {
+                console.log(student[i][x]+" ");
+            }
+        } 
+        }
+        //delete record 
+        var num=parseInt(prompt("Enter Student No"));
+        for(let i in student)
+        {
+            for(let x in student[i])
+            {
+            if(num==student[i]["stno"])
+            {
+               delete student[i];
+               break; 
+            }
+        } console.log(student[i]);
+        }
+        //Add record
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

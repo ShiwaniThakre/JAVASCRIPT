@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>OnBlur_OnFocus_OnSubmit</title>
+
+<script>
+    function fun(f)
+     {
+        if(f=="fname")
+        {
+            msg.innerHTML="";
+            msg.innerHTML="<p style='color:blue'>correct</p>";
+        }
+        else{
+            msg1.innerHTML="";
+            msg1.innerHTML="<p style='color:blue'>wrong</p>";
+        }
+     }
+     function fun1(l)
+     {
+        if(l=="fname")
+        {
+          msg.innerHTML="<p style='color:red'>Enter First Name</P>";
+        }
+        else{
+          msg1.innerHTML="<p style='color:red'>Enter Last Name</P>";
+        }
+     }
+
+</script>
+</head>
+<body>
+    <form name="f1" action="Success.html" onsubmit="fun2()"></form>
+    <input type="text" name="fname" placeholder="Enter FirstName" autocomplete="off" onblur="fun(this.name)" onfocus="fun1(this.name)"><br>
+    <span id="msg"></span><br><br> 
+    <input type="text" name="lname" placeholder="Enter LastName" onfocus="fun1(this.name)" onblur="fun(this.name)"><br>
+    <span id="msg1"></span><br><br>
+    <button type="submit">Submit</button>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<head>
+    <title>Promises</title>
+    <script>
+        let myFirstPromise = new Promise((resolve,reject) => {
+        setTimeout(function(){
+            resolve ("Success!");
+        },1000);
+    });
+    myFirstPromise.then((successMessage)=>{
+        console.log("Hi!" + successMessage);
+    });
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

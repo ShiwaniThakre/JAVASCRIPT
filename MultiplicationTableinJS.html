@@ -1,0 +1,41 @@
+<html>
+<head>
+    <title>Loop Demo</title>
+    <style>
+        table,tr
+        {
+         border: 5px inset rgb(58, 38, 23);
+         border-collapse: collapse;
+         padding: 10px;
+         width: 300px;
+         height: 40px;
+         text-align: center;
+         font-weight: bold;
+         margin: auto;
+        }
+        table td:nth-child(even)
+        {
+            background-color: black;
+            color:white;
+        }
+        table td:nth-child(odd)
+        {
+            background-color: brown;
+            color: aqua;
+        }
+    </style>
+
+    <script>
+        var i,no;
+        var no=parseInt(prompt("enter table no."));
+        document.write("<table><tr>");
+        for(i=1;i<=10;i++)
+        {
+            mul= no*i;
+            document.write("<td>"+no+"*"+i+"="+mul+"<td>");
+        }
+        document.write("</tr></table>");
+    
+    </script>
+</head>
+</html>

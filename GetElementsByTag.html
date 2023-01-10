@@ -1,0 +1,29 @@
+<html>
+<head>
+    <title>Event Haandling - get Elements by Tag</title>
+    <script>
+         function fun()
+         {
+            var p1= document.getElementsByTagName("p");
+            p1[0].innerHTML="New Inner Text";
+            p1[1].innerHTML="New Inner Text 1";
+
+            for(var i=0;i<p1.length;i++)
+            {
+                p1[i].style.color="red";
+                p1[i].style.fontSize="20px";
+                p1[i].style.fontFamily="monospace";
+            }
+         }
+    </script>
+    <body>
+        <p class="c1">This is para one</p>
+        <p class="c1">This is para two</p>
+        <h1 class="c1">This Is heading one</h1>
+        <h2>This Is heading Two</h2>
+
+        <button onclick="fun()">getElementsbyclassName</button>
+
+    </body>
+</head>
+</html>

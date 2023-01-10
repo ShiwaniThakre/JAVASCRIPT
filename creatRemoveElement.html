@@ -1,0 +1,27 @@
+<html>
+<head>
+    <title>Create  Element</title>
+</head>
+
+<script>
+    function create_para()
+    {
+        var para= document.createElement("p");
+        para.innerHTML="This is new para";
+        para.style.color="red";
+        document.body.appendChild(para);
+    }
+    function remove_element()
+    {
+        var element =document.getElementById("p1");
+        element.remove();
+    }
+
+</script>
+
+<body>
+       <button onmouseover="create_para()">Create New Paragraph</button>
+       <p id="p1">Dom Remove Method</p>
+       <button onmouseover="remove_element()">Remove Element</button>
+</body>
+</html>

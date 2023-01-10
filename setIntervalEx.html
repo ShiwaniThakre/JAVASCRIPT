@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Set Interval</title>
+<script>
+    
+    var interval;
+    function start()
+    {
+        interval= setInterval(fun,500)
+    }
+    function fun(){
+        time = new Date();
+        document.getElementById("p1").innerHTML=time.toLocaleTimeString();
+    }
+    function stop()
+    {
+        clearInterval(interval);
+    }
+</script>
+</head>
+<body>
+
+    <button onclick="start()" >Start Time</button>
+    <button  onclick="stop()">Stop Time</button>
+    <h2 id="p1"></h2>
+</body>
+</html>

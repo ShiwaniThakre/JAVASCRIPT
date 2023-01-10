@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Table Creating</title>
+</head>
+<script>
+    function create_table()
+    {
+    var tbl = document.createElement("table");
+    var col = parseInt(prompt("How many columns you want to create"));
+    var row = parseInt(prompt("How many row you want to create"));
+    var i,j;
+
+    for(i=0;i<row;i++)
+    {
+    var trow = document.createElement("tr");
+        for(j=0;j<col;j++)
+        {
+            const cell= document.createElement("td");
+            const celltext = document.createTextNode(`cell ${j}`);
+            cell.appendChild(celltext);   //push celltext into cell
+            trow.appendChild(cell);
+        }
+        tbl.appendChild(trow);
+    }
+    document.body.appendChild(tbl);
+    tbl.setAttribute("border",3);
+    tbl.setAttribute("align","center");
+    tbl.setAttribute("cellpadding",5);
+}
+</script>
+<body>
+    <button onclick="create_table()">Create Table</button>
+    <p id="p1"></p>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <script>
+        var  empno=[i];
+        var  ename=[i];
+        var  sal=[i];
+        var  deptno=[i];
+        var i=0;j;
+        var table;
+        function add()
+        {
+            empno[i]=parseInt(prompt("enter employee no"));
+            ename[i]=parseInt(prompt("enter employee name"));
+            sal[i]=parseInt(prompt("enter salary"));
+            deptno[i]=parseInt(prompt("enter dept no"));
+            i++;
+        }
+        function show()
+        {
+            var tb =document.getElementById("tbl");
+            for(j=0;j<i;j++)
+            {
+                table =`<tr><td>${empno[j]}</td><td>${ename[j]}</td><td>${sal[j]}</td><td>${deptno[j]}</td></tr>`;
+                tb.innerHTML+=table;
+            }
+        }
+        function dlt()
+        {
+            empno[i]=parseInt(prompt("enter employee no. you want to delete"));
+            
+
+        }
+    </script>
+</head>
+<body>
+    <button onclick="add()">Add Record</button>
+    <button onclick="show()">Show Record</button>
+    <button onclick="dlt()">Show Record</button>
+
+    <table id="tbl" border="3" width="300px" cellpadding="4">
+        <tr>
+            <th>Employee no</th>
+            <th>Employee name</th>
+            <th>Salary</th>
+            <th>Dept no</th>
+        </tr>
+    </table>
+</body>
+</html>

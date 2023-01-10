@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    
+</head>
+<body>
+    <button id="btn" onclick="fun()">Click Me</button>
+    <p id="p1">Document Object Model</p>
+
+    <script>
+        var b=document.getElementsById("btn");
+        b.addEventListener("click",fun);
+
+        function fun()
+          {
+            var para =document.getElementById('p1');
+            para.style.color="red";
+            para.style.fontSize="20px";
+          }
+    </script>
+</body>
+</html>
